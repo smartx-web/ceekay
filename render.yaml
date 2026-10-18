@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ceekay-portal
+    runtime: docker
+    repo: https://github.com/smartx-web/ceekay
+    branch: main
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: REGISTRATION_ENABLED
+        value: "false"
