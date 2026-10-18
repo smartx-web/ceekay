@@ -31,3 +31,9 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Neon credentials and local generated state
+.env.*
+!.env.example
+node_modules/
+.neon/
